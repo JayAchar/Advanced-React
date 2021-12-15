@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import styled from 'styled-components';
+
 import Nav from './Nav';
 
 const Logo = styled.h1`
@@ -39,12 +40,12 @@ const Header = () => (
       <Logo>
         <Link href="/">Sick Fits</Link>
       </Logo>
+      <Nav />
     </div>
 
     <div className="sub-bar">
       <p>Search</p>
     </div>
-    <Nav />
   </HeaderStyles>
 );
 
