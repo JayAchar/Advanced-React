@@ -1,8 +1,14 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const useForm = (initial = {}) => {
   // create a state object for input
   const [input, setInput] = useState(initial);
+
+  const initialValues = Object.values(initial).join('');
+
+  useEffect(() => {
+    setInput(initial);
+  }, [initialValues]);
 
   const handleChange = (e) => {
     let { name, value, type, files } = e.target;

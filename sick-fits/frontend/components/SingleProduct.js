@@ -18,7 +18,7 @@ const ProductStyles = styled.div`
   }
 `;
 
-const PRODUCT_ID_QUERY = gql`
+export const PRODUCT_ID_QUERY = gql`
   query PRODUCT_ID_QUERY($id: ID!) {
     Product(where: { id: $id }) {
       name
