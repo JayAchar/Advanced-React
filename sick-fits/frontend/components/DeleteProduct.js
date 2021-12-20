@@ -28,10 +28,10 @@ const DeleteProduct = ({ id, children }) => {
     <button
       type="button"
       disabled={loading}
-      onClick={async () => {
+      onClick={() => {
         if (confirm('Are you sure you want to delete this item?')) {
           try {
-            const res = await deleteProduct();
+            deleteProduct();
           } catch (err) {
             alert(err.message);
           }
