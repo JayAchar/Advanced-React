@@ -18,7 +18,6 @@ const SignOut = ({ children }) => {
 
   const handleSignOut = async (e) => {
     e.preventDefault();
-    console.log('clicked');
     await signout();
     router.push('/');
   };
