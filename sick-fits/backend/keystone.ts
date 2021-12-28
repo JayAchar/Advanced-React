@@ -21,6 +21,11 @@ const { withAuth } = createAuth({
   listKey: 'User',
   identityField: 'email',
   secretField: 'password',
+  passwordResetLink: {
+    async sendToken(args) {
+      console.log(args);
+    },
+  },
   initFirstItem: {
     fields: ['name', 'email', 'password'],
     // TODO add roles
